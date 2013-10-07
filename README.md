@@ -1,4 +1,4 @@
-Google App Engine sample
+Google App Engine easy example use to load test Google App Engine
 
 How to use
 =======
