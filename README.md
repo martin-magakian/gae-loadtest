@@ -1,24 +1,41 @@
-App Engine Java Application
-Copyright (C) 2010-2012 Google Inc.
+Google App Engine sample
 
-## Skeleton application for use with App Engine Java.
+How to use
+=======
 
-Requires [Apache Maven](http://maven.apache.org) 3.0 or greater, and JDK 6+ in order to run.
+1- Run locally
+------
 
-To build, run
+Compile the project:
+	$ mvn clean install
 
-    mvn package
+Run locally
+	$ mvn appengine:devserver
+Open your browser to https://localhost:8800
+<br />
 
-Building will run the tests, but to explicitly run tests you can use the test target
+(Optional) Create project to import in Eclipse:
+	$ mvn eclipse:clean eclipse:eclipse
 
-    mvn test
 
-To start the app, use the [App Engine Maven Plugin](http://code.google.com/p/appengine-maven-plugin/) that is already included in this demo.  Just run the command.
+2- Push to production
+------
+* Login and [create a new app](https://appengine.google.com/start/createapp) on App Engine.
 
-    mvn appengine:devserver
+* Edit your "path" to add App Engine tools for the command line.
+On Mac OS X simply edit ~/.profile and add:
 
-For further information, consult the [Java App Engine](https://developers.google.com/appengine/docs/java/overview) documentation.
+	PATH=$PATH:~/.m2/repository/com/google/appengine/appengine-java-sdk/1.8.2/appengine-java-sdk/appengine-java-sdk-1.8.2/bin
 
-To see all the available goals for the App Engine plugin, run
+Double check the path to AppEngine-sdk bin exist.
+If it doesn't exist you might have forgoten to run the previous command (see above)
+	$ mvn appengine:devserver
 
-    mvn help:describe -Dplugin=appengine
+* Push to production using
+	
+	appcfg.sh update target/gaeloadtest-1.0-SNAPSHOT/
+
+
+3- Try
+Simple connect to http://YOUR-APP-NAME.appspot.com/LoadTest
+to run the app.
