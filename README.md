@@ -7,14 +7,18 @@ How to use
 ------
 
 Compile the project:
+
 	$ mvn clean install
 
 Run locally
+
 	$ mvn appengine:devserver
+
 Open your browser to https://localhost:8800
 <br />
 
 (Optional) Create project to import in Eclipse:
+
 	$ mvn eclipse:clean eclipse:eclipse
 
 
@@ -29,6 +33,7 @@ On Mac OS X simply edit ~/.profile and add:
 
 Double check the path to AppEngine-sdk bin exist.
 If it doesn't exist you might have forgoten to run the previous command (see above)
+
 	$ mvn appengine:devserver
 
 * Push to production using
