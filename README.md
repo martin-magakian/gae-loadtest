@@ -42,5 +42,6 @@ If it doesn't exist you might have forgoten to run the previous command (see abo
 
 
 3- Try
-Simple connect to http://YOUR-APP-NAME.appspot.com/LoadTest
-to run the app.
+------
+
+Simple connect to http://YOUR-APP-NAME.appspot.com/LoadTest to run the app.
