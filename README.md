@@ -1,4 +1,5 @@
 Google App Engine easy example use to load test Google App Engine
+by [Anomaly Detection](https://anomaly.io)
 
 How to use
 =======
